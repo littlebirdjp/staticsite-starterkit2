@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@import "_reset";
+
+body {
+  color: #000;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto; 
+}
+
+header {
+  display: flex;
+  margin: 50px 0;
+  h1 {
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+    margin: 0 0 30px 0; 
+  }
+}
+
+section {
+  margin: 0 0 40px 0;
+  h2 {
+    font-size: 120%;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+  } 
+}
+
+footer {
+  margin: 0 0 30px 0;
+}
+
+.footerLink {
+  text-align: center;
+  margin: 0 0 30px 0;
+  li {
+    display: inline;
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 80%;
+}
+
+@import "layout_parts/_cat1";
+
+
+
