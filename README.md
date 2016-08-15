@@ -1,4 +1,5 @@
 # staticsite-starterkit2
+
 Starter Kit for a Simple Website Development.
 
 ## Features
@@ -7,7 +8,7 @@ Starter Kit for a Simple Website Development.
 - Prettify HTML formats.
 - Compile SCSS files to CSS (Using libsass).
 - Include a reset CSS automatically.
-- Transform latest CSS syntaxes to compatible ones(Using [cssnext](http://cssnext.io/)).
+- Transform latest CSS syntaxes to compatible ones(Using [PostCSS](http://postcss.org/) and [cssnext](http://cssnext.io/)).
 - Enbed inline souce maps in CSS.
 - Run Browser-Sync when compiling files.
 
@@ -44,7 +45,7 @@ $ npm start
 So, Change the setting in gulpfile.js for your project's requiement.
 
 ```
-browsers: 'last 2 versions'
+cssnext({browsers: ['last 2 version']})
 ```
 
 More specific Browserslist queries are [here](https://github.com/ai/browserslist#queries).
