@@ -9,7 +9,8 @@ var uglify = require('gulp-uglify');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync');
 var sourcemaps = require('gulp-sourcemaps');
-var cssnext = require('gulp-cssnext');
+var postcss = require('gulp-postcss');
+var cssnext = require('postcss-cssnext');
 
 var paths = {
   'html': 'src/',
@@ -52,6 +53,9 @@ gulp.task('prettify', ['html'], function() {
 });
 
 gulp.task('scss', function() {
+  var processors = [
+      cssnext()
+  ];
   return gulp.src(paths.scss + '**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -61,9 +65,7 @@ gulp.task('scss', function() {
     .on('error', function(err) {
       console.log(err.message);
     })
-    .pipe(cssnext({
-        browsers: ['last 2 versions']
-    }))
+    .pipe(postcss(processors))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.css))
     .pipe(browserSync.reload({
