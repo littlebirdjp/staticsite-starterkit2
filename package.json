@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Starter Kit for a Simple Website Development.",
   "author": "Yusuke Takahashi <youthkee@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/littlebirdjp/staticsite-starterkit2.git"
+  },
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
